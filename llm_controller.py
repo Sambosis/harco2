@@ -7,6 +7,7 @@ import asyncio
 from dotenv import load_dotenv
 load_dotenv()
 from icecream import ic
+from datetime import datetime
 
 # Configure icecream to log to file instead of console
 def log_to_file(*args):
@@ -31,8 +32,8 @@ ADJACENCIES = {
 }
 
 TEAM_MODELS = {
-    'Red': 'gpt-4.1',
-    'Blue': 'o4-mini'
+    'Red': 'o4-mini',
+    'Blue': 'gpt-4.1'
 }
 
 client = openai.AsyncOpenAI(api_key=os.environ.get('OPENAI_API_KEY'))
@@ -155,3 +156,24 @@ Moves to enemy locations are treated as attacks. Do not include any other text o
     
     action_plan = {"actions": []}
     return action_plan, prompt, response
+
+def get_unique_game_id():
+    """
+    Generates a unique game ID based on the current timestamp.
+    Returns: str, e.g., '20240607_153012'
+    """
+    return datetime.now().strftime('%Y%m%d_%H%M%S')
+
+
+def save_game_move(game_id, game_log):
+    """
+    Saves the current game log (list of moves) to a uniquely identified file in the 'games/' directory.
+    Each move should be a dict with at least: team, visible_state, actions.
+    Args:
+        game_id (str): Unique identifier for the game (timestamp-based).
+        game_log (list): List of move dicts.
+    """
+    os.makedirs('games', exist_ok=True)
+    file_path = os.path.join('games', f'game_{game_id}.json')
+    with open(file_path, 'w', encoding='utf-8') as f:
+        json.dump(game_log, f, ensure_ascii=False, indent=2)

@@ -6,7 +6,7 @@ import time
 from dataclasses import dataclass
 from typing import List
 from game import Game
-from llm_controller import get_action_plan
+from llm_controller import get_action_plan, get_unique_game_id, save_game_move
 from visualization import GameVisualizer
 from rich.console import Console
 from rich.table import Table
@@ -34,8 +34,10 @@ class BatchGameRunner:
     async def run_single_game(self, game_number: int, visualizer: GameVisualizer, clock: pygame.time.Clock) -> GameResult:
         """Run a single game with full visualization"""
         game = Game()
+        game_id = get_unique_game_id()
+        game_log = []
         
-        console.print(f"\n[bold cyan]Game {game_number}[/bold cyan]")
+        console.print(f"\n[bold cyan]Game {game_number} (ID: {game_id})[/bold cyan]")
         console.print(Panel("🎮 [bold cyan]Harford County Strategy Game[/bold cyan] 🎮", style="bright_blue"))
         console.print("[green]Initial game state loaded successfully![/green]")
         
@@ -62,6 +64,17 @@ class BatchGameRunner:
 
             state = game.get_visible_state(active_team)
             actions, prompt, response = await get_action_plan(active_team, state)
+
+            # Log the move
+            move_data = {
+                "turn": turn,
+                "team": active_team,
+                "visible_state": state,
+                "actions": actions.get('actions', []),
+                "raw_response": response
+            }
+            game_log.append(move_data)
+            save_game_move(game_id, game_log)
 
             console.print("\n[dim]Prompt sent to LLM:[/dim]")
             console.print("\n[dim]LLM Response received[/dim]")
