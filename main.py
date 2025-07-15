@@ -43,7 +43,7 @@ class BatchGameRunner:
         
         # Initial draw
         visualizer.draw_game_state(game)
-        await asyncio.sleep(1)
+        await asyncio.sleep(0.1)
 
         winner = None
         for turn in range(1, 121):
@@ -198,7 +198,7 @@ class BatchGameRunner:
             batch_results.append(result)
             
             # Brief pause between games
-            await asyncio.sleep(2)
+            await asyncio.sleep(0.1)
         
         self.current_batch_results = batch_results
         self.all_results.extend(batch_results)

@@ -4,6 +4,7 @@ import json
 import re
 import random
 import asyncio
+from miniOR import *
 from dotenv import load_dotenv
 load_dotenv()
 from icecream import ic
@@ -32,8 +33,8 @@ ADJACENCIES = {
 }
 
 TEAM_MODELS = {
-    'Red': 'o4-mini',
-    'Blue': 'gpt-4.1'
+    'Red': googleflashlite,
+    'Blue': googleflashlite
 }
 
 client = openai.AsyncOpenAI(api_key=os.environ.get('OPENAI_API_KEY'))
@@ -116,17 +117,19 @@ Moves to enemy locations are treated as attacks. Do not include any other text o
 
     response = None
     model_for_team = TEAM_MODELS.get(team, 'gpt-4o')
-
+    ic(f"Model for team: {model_for_team}")
+    ic(f"Prompt:")
+    ic(prompt)
     for attempt in range(3):
         try:
-            completion = ic(await client.chat.completions.create(
+            completion = await chat(
+                prompt_str= prompt,
                 model=model_for_team,
-                messages=[{'role': 'system', 'content': prompt}],
                 # temperature=0,  # Deterministic
                 # max_tokens=1000
-            ))
-            ic(f"Response: {completion.choices[0].message.content}")
-            response = completion.choices[0].message.content
+            )
+            ic(f"Response: {completion}")
+            response = completion
             
             # Extract JSON from markdown code blocks if present
             json_content = extract_json_from_markdown(response)
@@ -138,21 +141,20 @@ Moves to enemy locations are treated as attacks. Do not include any other text o
             else:
                 ic(f"Action plan: {action_plan}")
                 ic("Action plan is not a dict or does not have an 'actions' key")
-                await asyncio.sleep(4)
+                await asyncio.sleep(0.1)
                 raise json.JSONDecodeError("Invalid JSON structure", "", 0)
         except (json.JSONDecodeError, openai.OpenAIError, Exception) as e:
             error_msg = f"Attempt {attempt + 1} failed. Error: {str(e)}. "
             ic(f"Error: {error_msg}")
-            await asyncio.sleep(4)
+            await asyncio.sleep(0.1)
             if response:
                 error_msg += f"Previous response: {response[:200]}..."  # Truncate for brevity
                 ic(f"Error message: {error_msg}")
-                await asyncio.sleep(4)
+                await asyncio.sleep(0.1)
             prompt += f"\n\n{error_msg}\nPlease correct and output ONLY valid JSON as specified."
             ic(f"Prompt: {prompt}")
-    ic(f"Completion raw: {completion}")
     ic("Failed to get valid response from LLM. Using default empty actions.")
-    await asyncio.sleep(4)
+    await asyncio.sleep(0.1)
     
     action_plan = {"actions": []}
     return action_plan, prompt, response

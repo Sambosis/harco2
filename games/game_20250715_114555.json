@@ -1,0 +1,1500 @@
+[
+  {
+    "turn": 1,
+    "team": "Blue",
+    "visible_state": {
+      "team": "Blue",
+      "resources": 0,
+      "controlled_locations": [
+        "Fallston",
+        "Bel Air"
+      ],
+      "own_unit_count": 5,
+      "opponent_unit_count": 5,
+      "units": [
+        {
+          "id": "Blue-1",
+          "type": "infantry",
+          "health": 3,
+          "strength": 1,
+          "location": "Bel Air"
+        },
+        {
+          "id": "Blue-2",
+          "type": "infantry",
+          "health": 3,
+          "strength": 1,
+          "location": "Bel Air"
+        },
+        {
+          "id": "Blue-3",
+          "type": "infantry",
+          "health": 3,
+          "strength": 1,
+          "location": "Bel Air"
+        },
+        {
+          "id": "Blue-4",
+          "type": "infantry",
+          "health": 3,
+          "strength": 1,
+          "location": "Bel Air"
+        },
+        {
+          "id": "Blue-5",
+          "type": "infantry",
+          "health": 3,
+          "strength": 1,
+          "location": "Bel Air"
+        }
+      ],
+      "locations": {
+        "Bel Air": {
+          "control": "Blue",
+          "resources": 1,
+          "connections": [
+            "Fallston",
+            "Joppatowne",
+            "Edgewood",
+            "Aberdeen Proving Ground"
+          ],
+          "own_units_count": 5,
+          "enemy_units_count": 0
+        },
+        "Aberdeen Proving Ground": {
+          "control": "Red",
+          "resources": 1,
+          "connections": [
+            "Edgewood",
+            "Havre de Grace",
+            "Bel Air"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": 5
+        },
+        "Havre de Grace": {
+          "control": null,
+          "resources": 1,
+          "connections": [
+            "Aberdeen Proving Ground"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": null
+        },
+        "Edgewood": {
+          "control": null,
+          "resources": 1,
+          "connections": [
+            "Aberdeen Proving Ground",
+            "Joppatowne",
+            "Bel Air"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": 0
+        },
+        "Joppatowne": {
+          "control": null,
+          "resources": 1,
+          "connections": [
+            "Edgewood",
+            "Bel Air"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": 0
+        },
+        "Fallston": {
+          "control": null,
+          "resources": 1,
+          "connections": [
+            "Bel Air"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": 0
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "move",
+        "unit_id": "Blue-1",
+        "to": "Joppatowne"
+      },
+      {
+        "type": "move",
+        "unit_id": "Blue-2",
+        "to": "Edgewood"
+      },
+      {
+        "type": "move",
+        "unit_id": "Blue-3",
+        "to": "Fallston"
+      },
+      {
+        "type": "move",
+        "unit_id": "Blue-4",
+        "to": "Edgewood"
+      },
+      {
+        "type": "move",
+        "unit_id": "Blue-5",
+        "to": "Joppatowne"
+      }
+    ],
+    "raw_response": "```json\n{\n  \"actions\": [\n    {\n      \"type\": \"move\",\n      \"unit_id\": \"Blue-1\",\n      \"to\": \"Joppatowne\"\n    },\n    {\n      \"type\": \"move\",\n      \"unit_id\": \"Blue-2\",\n      \"to\": \"Edgewood\"\n    },\n    {\n      \"type\": \"move\",\n      \"unit_id\": \"Blue-3\",\n      \"to\": \"Fallston\"\n    },\n    {\n      \"type\": \"move\",\n      \"unit_id\": \"Blue-4\",\n      \"to\": \"Edgewood\"\n    },\n    {\n      \"type\": \"move\",\n      \"unit_id\": \"Blue-5\",\n      \"to\": \"Joppatowne\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "turn": 2,
+    "team": "Red",
+    "visible_state": {
+      "team": "Red",
+      "resources": 0,
+      "controlled_locations": [
+        "Aberdeen Proving Ground",
+        "Havre de Grace",
+        "Edgewood",
+        "Joppatowne"
+      ],
+      "own_unit_count": 5,
+      "opponent_unit_count": 5,
+      "units": [
+        {
+          "id": "Red-1",
+          "type": "infantry",
+          "health": 3,
+          "strength": 1,
+          "location": "Aberdeen Proving Ground"
+        },
+        {
+          "id": "Red-2",
+          "type": "infantry",
+          "health": 3,
+          "strength": 1,
+          "location": "Aberdeen Proving Ground"
+        },
+        {
+          "id": "Red-3",
+          "type": "infantry",
+          "health": 3,
+          "strength": 1,
+          "location": "Aberdeen Proving Ground"
+        },
+        {
+          "id": "Red-4",
+          "type": "infantry",
+          "health": 3,
+          "strength": 1,
+          "location": "Aberdeen Proving Ground"
+        },
+        {
+          "id": "Red-5",
+          "type": "infantry",
+          "health": 3,
+          "strength": 1,
+          "location": "Aberdeen Proving Ground"
+        }
+      ],
+      "locations": {
+        "Bel Air": {
+          "control": "Blue",
+          "resources": 1,
+          "connections": [
+            "Fallston",
+            "Joppatowne",
+            "Edgewood",
+            "Aberdeen Proving Ground"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": 0
+        },
+        "Aberdeen Proving Ground": {
+          "control": "Red",
+          "resources": 1,
+          "connections": [
+            "Edgewood",
+            "Havre de Grace",
+            "Bel Air"
+          ],
+          "own_units_count": 5,
+          "enemy_units_count": 0
+        },
+        "Havre de Grace": {
+          "control": null,
+          "resources": 1,
+          "connections": [
+            "Aberdeen Proving Ground"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": 0
+        },
+        "Edgewood": {
+          "control": "Blue",
+          "resources": 1,
+          "connections": [
+            "Aberdeen Proving Ground",
+            "Joppatowne",
+            "Bel Air"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": 2
+        },
+        "Joppatowne": {
+          "control": "Blue",
+          "resources": 1,
+          "connections": [
+            "Edgewood",
+            "Bel Air"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": null
+        },
+        "Fallston": {
+          "control": "Blue",
+          "resources": 1,
+          "connections": [
+            "Bel Air"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": null
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "move",
+        "unit_id": "Red-1",
+        "to": "Edgewood"
+      },
+      {
+        "type": "move",
+        "unit_id": "Red-2",
+        "to": "Edgewood"
+      },
+      {
+        "type": "move",
+        "unit_id": "Red-3",
+        "to": "Havre de Grace"
+      },
+      {
+        "type": "move",
+        "unit_id": "Red-4",
+        "to": "Havre de Grace"
+      },
+      {
+        "type": "move",
+        "unit_id": "Red-5",
+        "to": "Havre de Grace"
+      }
+    ],
+    "raw_response": "```json\n{\n  \"actions\": [\n    {\n      \"type\": \"move\",\n      \"unit_id\": \"Red-1\",\n      \"to\": \"Edgewood\"\n    },\n    {\n      \"type\": \"move\",\n      \"unit_id\": \"Red-2\",\n      \"to\": \"Edgewood\"\n    },\n    {\n      \"type\": \"move\",\n      \"unit_id\": \"Red-3\",\n      \"to\": \"Havre de Grace\"\n    },\n    {\n      \"type\": \"move\",\n      \"unit_id\": \"Red-4\",\n      \"to\": \"Havre de Grace\"\n    },\n    {\n      \"type\": \"move\",\n      \"unit_id\": \"Red-5\",\n      \"to\": \"Havre de Grace\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "turn": 3,
+    "team": "Blue",
+    "visible_state": {
+      "team": "Blue",
+      "resources": 4,
+      "controlled_locations": [
+        "Fallston",
+        "Bel Air"
+      ],
+      "own_unit_count": 3,
+      "opponent_unit_count": 4,
+      "units": [
+        {
+          "id": "Blue-1",
+          "type": "infantry",
+          "health": 3,
+          "strength": 1,
+          "location": "Joppatowne"
+        },
+        {
+          "id": "Blue-3",
+          "type": "infantry",
+          "health": 3,
+          "strength": 1,
+          "location": "Fallston"
+        },
+        {
+          "id": "Blue-5",
+          "type": "infantry",
+          "health": 3,
+          "strength": 1,
+          "location": "Joppatowne"
+        }
+      ],
+      "locations": {
+        "Bel Air": {
+          "control": "Blue",
+          "resources": 1,
+          "connections": [
+            "Fallston",
+            "Joppatowne",
+            "Edgewood",
+            "Aberdeen Proving Ground"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": 0
+        },
+        "Aberdeen Proving Ground": {
+          "control": "Red",
+          "resources": 1,
+          "connections": [
+            "Edgewood",
+            "Havre de Grace",
+            "Bel Air"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": null
+        },
+        "Havre de Grace": {
+          "control": "Red",
+          "resources": 1,
+          "connections": [
+            "Aberdeen Proving Ground"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": null
+        },
+        "Edgewood": {
+          "control": "Red",
+          "resources": 1,
+          "connections": [
+            "Aberdeen Proving Ground",
+            "Joppatowne",
+            "Bel Air"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": 1
+        },
+        "Joppatowne": {
+          "control": "Blue",
+          "resources": 1,
+          "connections": [
+            "Edgewood",
+            "Bel Air"
+          ],
+          "own_units_count": 2,
+          "enemy_units_count": 0
+        },
+        "Fallston": {
+          "control": "Blue",
+          "resources": 1,
+          "connections": [
+            "Bel Air"
+          ],
+          "own_units_count": 1,
+          "enemy_units_count": 0
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "move",
+        "unit_id": "Blue-1",
+        "to": "Edgewood"
+      },
+      {
+        "type": "move",
+        "unit_id": "Blue-3",
+        "to": "Edgewood"
+      },
+      {
+        "type": "reinforce",
+        "location": "Joppatowne"
+      }
+    ],
+    "raw_response": "```json\n{\n  \"actions\": [\n    {\n      \"type\": \"move\",\n      \"unit_id\": \"Blue-1\",\n      \"to\": \"Edgewood\"\n    },\n    {\n      \"type\": \"move\",\n      \"unit_id\": \"Blue-3\",\n      \"to\": \"Edgewood\"\n    },\n    {\n      \"type\": \"reinforce\",\n      \"location\": \"Joppatowne\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "turn": 4,
+    "team": "Red",
+    "visible_state": {
+      "team": "Red",
+      "resources": 3,
+      "controlled_locations": [
+        "Aberdeen Proving Ground",
+        "Havre de Grace",
+        "Edgewood",
+        "Joppatowne"
+      ],
+      "own_unit_count": 3,
+      "opponent_unit_count": 4,
+      "units": [
+        {
+          "id": "Red-3",
+          "type": "infantry",
+          "health": 3,
+          "strength": 1,
+          "location": "Havre de Grace"
+        },
+        {
+          "id": "Red-4",
+          "type": "infantry",
+          "health": 3,
+          "strength": 1,
+          "location": "Havre de Grace"
+        },
+        {
+          "id": "Red-5",
+          "type": "infantry",
+          "health": 3,
+          "strength": 1,
+          "location": "Havre de Grace"
+        }
+      ],
+      "locations": {
+        "Bel Air": {
+          "control": "Blue",
+          "resources": 1,
+          "connections": [
+            "Fallston",
+            "Joppatowne",
+            "Edgewood",
+            "Aberdeen Proving Ground"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": null
+        },
+        "Aberdeen Proving Ground": {
+          "control": "Red",
+          "resources": 1,
+          "connections": [
+            "Edgewood",
+            "Havre de Grace",
+            "Bel Air"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": 0
+        },
+        "Havre de Grace": {
+          "control": "Red",
+          "resources": 1,
+          "connections": [
+            "Aberdeen Proving Ground"
+          ],
+          "own_units_count": 3,
+          "enemy_units_count": 0
+        },
+        "Edgewood": {
+          "control": "Blue",
+          "resources": 1,
+          "connections": [
+            "Aberdeen Proving Ground",
+            "Joppatowne",
+            "Bel Air"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": null
+        },
+        "Joppatowne": {
+          "control": "Blue",
+          "resources": 1,
+          "connections": [
+            "Edgewood",
+            "Bel Air"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": null
+        },
+        "Fallston": {
+          "control": "Blue",
+          "resources": 1,
+          "connections": [
+            "Bel Air"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": null
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "move",
+        "unit_id": "Red-3",
+        "to": "Aberdeen Proving Ground"
+      },
+      {
+        "type": "move",
+        "unit_id": "Red-4",
+        "to": "Aberdeen Proving Ground"
+      },
+      {
+        "type": "move",
+        "unit_id": "Red-5",
+        "to": "Aberdeen Proving Ground"
+      },
+      {
+        "type": "reinforce",
+        "location": "Havre de Grace"
+      }
+    ],
+    "raw_response": "```json\n{\n  \"actions\": [\n    {\n      \"type\": \"move\",\n      \"unit_id\": \"Red-3\",\n      \"to\": \"Aberdeen Proving Ground\"\n    },\n    {\n      \"type\": \"move\",\n      \"unit_id\": \"Red-4\",\n      \"to\": \"Aberdeen Proving Ground\"\n    },\n    {\n      \"type\": \"move\",\n      \"unit_id\": \"Red-5\",\n      \"to\": \"Aberdeen Proving Ground\"\n    },\n    {\n      \"type\": \"reinforce\",\n      \"location\": \"Havre de Grace\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "turn": 5,
+    "team": "Blue",
+    "visible_state": {
+      "team": "Blue",
+      "resources": 5,
+      "controlled_locations": [
+        "Fallston",
+        "Bel Air"
+      ],
+      "own_unit_count": 4,
+      "opponent_unit_count": 4,
+      "units": [
+        {
+          "id": "Blue-1",
+          "type": "infantry",
+          "health": 1,
+          "strength": 1,
+          "location": "Edgewood"
+        },
+        {
+          "id": "Blue-3",
+          "type": "infantry",
+          "health": 3,
+          "strength": 1,
+          "location": "Fallston"
+        },
+        {
+          "id": "Blue-5",
+          "type": "infantry",
+          "health": 3,
+          "strength": 1,
+          "location": "Joppatowne"
+        },
+        {
+          "id": "Blue-4",
+          "type": "infantry",
+          "health": 3,
+          "strength": 1,
+          "location": "Joppatowne"
+        }
+      ],
+      "locations": {
+        "Bel Air": {
+          "control": "Blue",
+          "resources": 1,
+          "connections": [
+            "Fallston",
+            "Joppatowne",
+            "Edgewood",
+            "Aberdeen Proving Ground"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": 0
+        },
+        "Aberdeen Proving Ground": {
+          "control": "Red",
+          "resources": 1,
+          "connections": [
+            "Edgewood",
+            "Havre de Grace",
+            "Bel Air"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": 3
+        },
+        "Havre de Grace": {
+          "control": "Red",
+          "resources": 1,
+          "connections": [
+            "Aberdeen Proving Ground"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": null
+        },
+        "Edgewood": {
+          "control": "Blue",
+          "resources": 1,
+          "connections": [
+            "Aberdeen Proving Ground",
+            "Joppatowne",
+            "Bel Air"
+          ],
+          "own_units_count": 1,
+          "enemy_units_count": 0
+        },
+        "Joppatowne": {
+          "control": "Blue",
+          "resources": 1,
+          "connections": [
+            "Edgewood",
+            "Bel Air"
+          ],
+          "own_units_count": 2,
+          "enemy_units_count": 0
+        },
+        "Fallston": {
+          "control": "Blue",
+          "resources": 1,
+          "connections": [
+            "Bel Air"
+          ],
+          "own_units_count": 1,
+          "enemy_units_count": 0
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "move",
+        "unit_id": "Blue-1",
+        "to": "Aberdeen Proving Ground"
+      },
+      {
+        "type": "move",
+        "unit_id": "Blue-3",
+        "to": "Bel Air"
+      },
+      {
+        "type": "move",
+        "unit_id": "Blue-5",
+        "to": "Joppatowne"
+      },
+      {
+        "type": "move",
+        "unit_id": "Blue-4",
+        "to": "Joppatowne"
+      }
+    ],
+    "raw_response": "```json\n{\n  \"actions\": [\n    {\n      \"type\": \"move\",\n      \"unit_id\": \"Blue-1\",\n      \"to\": \"Aberdeen Proving Ground\"\n    },\n    {\n      \"type\": \"move\",\n      \"unit_id\": \"Blue-3\",\n      \"to\": \"Bel Air\"\n    },\n    {\n      \"type\": \"move\",\n      \"unit_id\": \"Blue-5\",\n      \"to\": \"Joppatowne\"\n    },\n    {\n      \"type\": \"move\",\n      \"unit_id\": \"Blue-4\",\n      \"to\": \"Joppatowne\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "turn": 6,
+    "team": "Red",
+    "visible_state": {
+      "team": "Red",
+      "resources": 2,
+      "controlled_locations": [
+        "Aberdeen Proving Ground",
+        "Havre de Grace",
+        "Edgewood",
+        "Joppatowne"
+      ],
+      "own_unit_count": 4,
+      "opponent_unit_count": 3,
+      "units": [
+        {
+          "id": "Red-3",
+          "type": "infantry",
+          "health": 3,
+          "strength": 1,
+          "location": "Aberdeen Proving Ground"
+        },
+        {
+          "id": "Red-4",
+          "type": "infantry",
+          "health": 3,
+          "strength": 1,
+          "location": "Aberdeen Proving Ground"
+        },
+        {
+          "id": "Red-5",
+          "type": "infantry",
+          "health": 3,
+          "strength": 1,
+          "location": "Aberdeen Proving Ground"
+        },
+        {
+          "id": "Red-4",
+          "type": "infantry",
+          "health": 3,
+          "strength": 1,
+          "location": "Aberdeen Proving Ground"
+        }
+      ],
+      "locations": {
+        "Bel Air": {
+          "control": "Blue",
+          "resources": 1,
+          "connections": [
+            "Fallston",
+            "Joppatowne",
+            "Edgewood",
+            "Aberdeen Proving Ground"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": 1
+        },
+        "Aberdeen Proving Ground": {
+          "control": "Red",
+          "resources": 1,
+          "connections": [
+            "Edgewood",
+            "Havre de Grace",
+            "Bel Air"
+          ],
+          "own_units_count": 3,
+          "enemy_units_count": 0
+        },
+        "Havre de Grace": {
+          "control": "Red",
+          "resources": 1,
+          "connections": [
+            "Aberdeen Proving Ground"
+          ],
+          "own_units_count": 1,
+          "enemy_units_count": 0
+        },
+        "Edgewood": {
+          "control": "Blue",
+          "resources": 1,
+          "connections": [
+            "Aberdeen Proving Ground",
+            "Joppatowne",
+            "Bel Air"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": 0
+        },
+        "Joppatowne": {
+          "control": "Blue",
+          "resources": 1,
+          "connections": [
+            "Edgewood",
+            "Bel Air"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": null
+        },
+        "Fallston": {
+          "control": "Blue",
+          "resources": 1,
+          "connections": [
+            "Bel Air"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": null
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "move",
+        "unit_id": "Red-3",
+        "to": "Edgewood"
+      },
+      {
+        "type": "move",
+        "unit_id": "Red-4",
+        "to": "Bel Air"
+      },
+      {
+        "type": "move",
+        "unit_id": "Red-5",
+        "to": "Joppatowne"
+      }
+    ],
+    "raw_response": "```json\n{\n  \"actions\": [\n    {\"type\": \"move\", \"unit_id\": \"Red-3\", \"to\": \"Edgewood\"},\n    {\"type\": \"move\", \"unit_id\": \"Red-4\", \"to\": \"Bel Air\"},\n    {\"type\": \"move\", \"unit_id\": \"Red-5\", \"to\": \"Joppatowne\"}\n  ]\n}\n```"
+  },
+  {
+    "turn": 7,
+    "team": "Blue",
+    "visible_state": {
+      "team": "Blue",
+      "resources": 9,
+      "controlled_locations": [
+        "Fallston",
+        "Bel Air"
+      ],
+      "own_unit_count": 2,
+      "opponent_unit_count": 4,
+      "units": [
+        {
+          "id": "Blue-5",
+          "type": "infantry",
+          "health": 3,
+          "strength": 1,
+          "location": "Joppatowne"
+        },
+        {
+          "id": "Blue-4",
+          "type": "infantry",
+          "health": 3,
+          "strength": 1,
+          "location": "Joppatowne"
+        }
+      ],
+      "locations": {
+        "Bel Air": {
+          "control": "Red",
+          "resources": 1,
+          "connections": [
+            "Fallston",
+            "Joppatowne",
+            "Edgewood",
+            "Aberdeen Proving Ground"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": 1
+        },
+        "Aberdeen Proving Ground": {
+          "control": "Red",
+          "resources": 1,
+          "connections": [
+            "Edgewood",
+            "Havre de Grace",
+            "Bel Air"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": null
+        },
+        "Havre de Grace": {
+          "control": "Red",
+          "resources": 1,
+          "connections": [
+            "Aberdeen Proving Ground"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": null
+        },
+        "Edgewood": {
+          "control": "Red",
+          "resources": 1,
+          "connections": [
+            "Aberdeen Proving Ground",
+            "Joppatowne",
+            "Bel Air"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": 1
+        },
+        "Joppatowne": {
+          "control": "Blue",
+          "resources": 1,
+          "connections": [
+            "Edgewood",
+            "Bel Air"
+          ],
+          "own_units_count": 2,
+          "enemy_units_count": 0
+        },
+        "Fallston": {
+          "control": "Blue",
+          "resources": 1,
+          "connections": [
+            "Bel Air"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": null
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "move",
+        "unit_id": "Blue-5",
+        "to": "Bel Air"
+      },
+      {
+        "type": "move",
+        "unit_id": "Blue-4",
+        "to": "Edgewood"
+      },
+      {
+        "type": "reinforce",
+        "location": "Joppatowne"
+      },
+      {
+        "type": "reinforce",
+        "location": "Fallston"
+      }
+    ],
+    "raw_response": "```json\n{\n  \"actions\": [\n    {\n      \"type\": \"move\",\n      \"unit_id\": \"Blue-5\",\n      \"to\": \"Bel Air\"\n    },\n    {\n      \"type\": \"move\",\n      \"unit_id\": \"Blue-4\",\n      \"to\": \"Edgewood\"\n    },\n    {\n      \"type\": \"reinforce\",\n      \"location\": \"Joppatowne\"\n    },\n    {\n      \"type\": \"reinforce\",\n      \"location\": \"Fallston\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "turn": 8,
+    "team": "Red",
+    "visible_state": {
+      "team": "Red",
+      "resources": 6,
+      "controlled_locations": [
+        "Aberdeen Proving Ground",
+        "Havre de Grace",
+        "Edgewood",
+        "Joppatowne"
+      ],
+      "own_unit_count": 3,
+      "opponent_unit_count": 3,
+      "units": [
+        {
+          "id": "Red-3",
+          "type": "infantry",
+          "health": 2,
+          "strength": 1,
+          "location": "Edgewood"
+        },
+        {
+          "id": "Red-5",
+          "type": "infantry",
+          "health": 3,
+          "strength": 1,
+          "location": "Aberdeen Proving Ground"
+        },
+        {
+          "id": "Red-4",
+          "type": "infantry",
+          "health": 3,
+          "strength": 1,
+          "location": "Havre de Grace"
+        }
+      ],
+      "locations": {
+        "Bel Air": {
+          "control": "Blue",
+          "resources": 1,
+          "connections": [
+            "Fallston",
+            "Joppatowne",
+            "Edgewood",
+            "Aberdeen Proving Ground"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": 1
+        },
+        "Aberdeen Proving Ground": {
+          "control": "Red",
+          "resources": 1,
+          "connections": [
+            "Edgewood",
+            "Havre de Grace",
+            "Bel Air"
+          ],
+          "own_units_count": 1,
+          "enemy_units_count": 0
+        },
+        "Havre de Grace": {
+          "control": "Red",
+          "resources": 1,
+          "connections": [
+            "Aberdeen Proving Ground"
+          ],
+          "own_units_count": 1,
+          "enemy_units_count": 0
+        },
+        "Edgewood": {
+          "control": "Red",
+          "resources": 1,
+          "connections": [
+            "Aberdeen Proving Ground",
+            "Joppatowne",
+            "Bel Air"
+          ],
+          "own_units_count": 1,
+          "enemy_units_count": 0
+        },
+        "Joppatowne": {
+          "control": "Blue",
+          "resources": 1,
+          "connections": [
+            "Edgewood",
+            "Bel Air"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": 1
+        },
+        "Fallston": {
+          "control": "Blue",
+          "resources": 1,
+          "connections": [
+            "Bel Air"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": null
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "move",
+        "unit_id": "Red-5",
+        "to": "Edgewood"
+      },
+      {
+        "type": "move",
+        "unit_id": "Red-4",
+        "to": "Edgewood"
+      },
+      {
+        "type": "reinforce",
+        "location": "Edgewood"
+      }
+    ],
+    "raw_response": "{\n  \"actions\": [\n    {\n      \"type\": \"move\",\n      \"unit_id\": \"Red-5\",\n      \"to\": \"Edgewood\"\n    },\n    {\n      \"type\": \"move\",\n      \"unit_id\": \"Red-4\",\n      \"to\": \"Edgewood\"\n    },\n    {\n      \"type\": \"reinforce\",\n      \"location\": \"Edgewood\"\n    }\n  ]\n}"
+  },
+  {
+    "turn": 9,
+    "team": "Blue",
+    "visible_state": {
+      "team": "Blue",
+      "resources": 6,
+      "controlled_locations": [
+        "Fallston",
+        "Bel Air"
+      ],
+      "own_unit_count": 3,
+      "opponent_unit_count": 4,
+      "units": [
+        {
+          "id": "Blue-5",
+          "type": "infantry",
+          "health": 3,
+          "strength": 1,
+          "location": "Bel Air"
+        },
+        {
+          "id": "Blue-2",
+          "type": "infantry",
+          "health": 3,
+          "strength": 1,
+          "location": "Joppatowne"
+        },
+        {
+          "id": "Blue-3",
+          "type": "infantry",
+          "health": 3,
+          "strength": 1,
+          "location": "Fallston"
+        }
+      ],
+      "locations": {
+        "Bel Air": {
+          "control": "Blue",
+          "resources": 1,
+          "connections": [
+            "Fallston",
+            "Joppatowne",
+            "Edgewood",
+            "Aberdeen Proving Ground"
+          ],
+          "own_units_count": 1,
+          "enemy_units_count": 0
+        },
+        "Aberdeen Proving Ground": {
+          "control": "Red",
+          "resources": 1,
+          "connections": [
+            "Edgewood",
+            "Havre de Grace",
+            "Bel Air"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": 0
+        },
+        "Havre de Grace": {
+          "control": "Red",
+          "resources": 1,
+          "connections": [
+            "Aberdeen Proving Ground"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": null
+        },
+        "Edgewood": {
+          "control": "Red",
+          "resources": 1,
+          "connections": [
+            "Aberdeen Proving Ground",
+            "Joppatowne",
+            "Bel Air"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": 3
+        },
+        "Joppatowne": {
+          "control": "Blue",
+          "resources": 1,
+          "connections": [
+            "Edgewood",
+            "Bel Air"
+          ],
+          "own_units_count": 1,
+          "enemy_units_count": 0
+        },
+        "Fallston": {
+          "control": "Blue",
+          "resources": 1,
+          "connections": [
+            "Bel Air"
+          ],
+          "own_units_count": 1,
+          "enemy_units_count": 0
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "move",
+        "unit_id": "Blue-5",
+        "to": "Edgewood"
+      },
+      {
+        "type": "move",
+        "unit_id": "Blue-2",
+        "to": "Edgewood"
+      },
+      {
+        "type": "reinforce",
+        "location": "Bel Air"
+      },
+      {
+        "type": "move",
+        "unit_id": "Blue-3",
+        "to": "Joppatowne"
+      }
+    ],
+    "raw_response": "```json\n{\n  \"actions\": [\n    {\n      \"type\": \"move\",\n      \"unit_id\": \"Blue-5\",\n      \"to\": \"Edgewood\"\n    },\n    {\n      \"type\": \"move\",\n      \"unit_id\": \"Blue-2\",\n      \"to\": \"Edgewood\"\n    },\n    {\n      \"type\": \"reinforce\",\n      \"location\": \"Bel Air\"\n    },\n    {\n      \"type\": \"move\",\n      \"unit_id\": \"Blue-3\",\n      \"to\": \"Joppatowne\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "turn": 10,
+    "team": "Red",
+    "visible_state": {
+      "team": "Red",
+      "resources": 6,
+      "controlled_locations": [
+        "Aberdeen Proving Ground",
+        "Havre de Grace",
+        "Edgewood",
+        "Joppatowne"
+      ],
+      "own_unit_count": 4,
+      "opponent_unit_count": 2,
+      "units": [
+        {
+          "id": "Red-3",
+          "type": "infantry",
+          "health": 2,
+          "strength": 1,
+          "location": "Edgewood"
+        },
+        {
+          "id": "Red-5",
+          "type": "infantry",
+          "health": 2,
+          "strength": 1,
+          "location": "Edgewood"
+        },
+        {
+          "id": "Red-4",
+          "type": "infantry",
+          "health": 3,
+          "strength": 1,
+          "location": "Havre de Grace"
+        },
+        {
+          "id": "Red-4",
+          "type": "infantry",
+          "health": 3,
+          "strength": 1,
+          "location": "Havre de Grace"
+        }
+      ],
+      "locations": {
+        "Bel Air": {
+          "control": "Blue",
+          "resources": 1,
+          "connections": [
+            "Fallston",
+            "Joppatowne",
+            "Edgewood",
+            "Aberdeen Proving Ground"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": 1
+        },
+        "Aberdeen Proving Ground": {
+          "control": "Red",
+          "resources": 1,
+          "connections": [
+            "Edgewood",
+            "Havre de Grace",
+            "Bel Air"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": 0
+        },
+        "Havre de Grace": {
+          "control": "Red",
+          "resources": 1,
+          "connections": [
+            "Aberdeen Proving Ground"
+          ],
+          "own_units_count": 1,
+          "enemy_units_count": 0
+        },
+        "Edgewood": {
+          "control": "Red",
+          "resources": 1,
+          "connections": [
+            "Aberdeen Proving Ground",
+            "Joppatowne",
+            "Bel Air"
+          ],
+          "own_units_count": 3,
+          "enemy_units_count": 0
+        },
+        "Joppatowne": {
+          "control": "Blue",
+          "resources": 1,
+          "connections": [
+            "Edgewood",
+            "Bel Air"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": 0
+        },
+        "Fallston": {
+          "control": "Blue",
+          "resources": 1,
+          "connections": [
+            "Bel Air"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": null
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "move",
+        "unit_id": "Red-3",
+        "to": "Bel Air"
+      },
+      {
+        "type": "move",
+        "unit_id": "Red-5",
+        "to": "Joppatowne"
+      }
+    ],
+    "raw_response": "```json\n{\n  \"actions\": [\n    {\n      \"type\": \"move\",\n      \"unit_id\": \"Red-3\",\n      \"to\": \"Bel Air\"\n    },\n    {\n      \"type\": \"move\",\n      \"unit_id\": \"Red-5\",\n      \"to\": \"Joppatowne\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "turn": 11,
+    "team": "Blue",
+    "visible_state": {
+      "team": "Blue",
+      "resources": 6,
+      "controlled_locations": [
+        "Fallston",
+        "Bel Air"
+      ],
+      "own_unit_count": 2,
+      "opponent_unit_count": 3,
+      "units": [
+        {
+          "id": "Blue-3",
+          "type": "infantry",
+          "health": 3,
+          "strength": 1,
+          "location": "Fallston"
+        },
+        {
+          "id": "Blue-2",
+          "type": "infantry",
+          "health": 1,
+          "strength": 1,
+          "location": "Bel Air"
+        }
+      ],
+      "locations": {
+        "Bel Air": {
+          "control": "Blue",
+          "resources": 1,
+          "connections": [
+            "Fallston",
+            "Joppatowne",
+            "Edgewood",
+            "Aberdeen Proving Ground"
+          ],
+          "own_units_count": 1,
+          "enemy_units_count": 0
+        },
+        "Aberdeen Proving Ground": {
+          "control": "Red",
+          "resources": 1,
+          "connections": [
+            "Edgewood",
+            "Havre de Grace",
+            "Bel Air"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": 0
+        },
+        "Havre de Grace": {
+          "control": "Red",
+          "resources": 1,
+          "connections": [
+            "Aberdeen Proving Ground"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": null
+        },
+        "Edgewood": {
+          "control": "Red",
+          "resources": 1,
+          "connections": [
+            "Aberdeen Proving Ground",
+            "Joppatowne",
+            "Bel Air"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": 1
+        },
+        "Joppatowne": {
+          "control": "Red",
+          "resources": 1,
+          "connections": [
+            "Edgewood",
+            "Bel Air"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": 1
+        },
+        "Fallston": {
+          "control": "Blue",
+          "resources": 1,
+          "connections": [
+            "Bel Air"
+          ],
+          "own_units_count": 1,
+          "enemy_units_count": 0
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "move",
+        "unit_id": "Blue-3",
+        "to": "Joppatowne"
+      },
+      {
+        "type": "move",
+        "unit_id": "Blue-2",
+        "to": "Edgewood"
+      },
+      {
+        "type": "reinforce",
+        "location": "Bel Air"
+      }
+    ],
+    "raw_response": "```json\n{\n  \"actions\": [\n    {\n      \"type\": \"move\",\n      \"unit_id\": \"Blue-3\",\n      \"to\": \"Joppatowne\"\n    },\n    {\n      \"type\": \"move\",\n      \"unit_id\": \"Blue-2\",\n      \"to\": \"Edgewood\"\n    },\n    {\n      \"type\": \"reinforce\",\n      \"location\": \"Bel Air\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "turn": 12,
+    "team": "Red",
+    "visible_state": {
+      "team": "Red",
+      "resources": 10,
+      "controlled_locations": [
+        "Aberdeen Proving Ground",
+        "Havre de Grace",
+        "Edgewood",
+        "Joppatowne"
+      ],
+      "own_unit_count": 3,
+      "opponent_unit_count": 2,
+      "units": [
+        {
+          "id": "Red-5",
+          "type": "infantry",
+          "health": 2,
+          "strength": 1,
+          "location": "Joppatowne"
+        },
+        {
+          "id": "Red-4",
+          "type": "infantry",
+          "health": 3,
+          "strength": 1,
+          "location": "Havre de Grace"
+        },
+        {
+          "id": "Red-4",
+          "type": "infantry",
+          "health": 2,
+          "strength": 1,
+          "location": "Havre de Grace"
+        }
+      ],
+      "locations": {
+        "Bel Air": {
+          "control": "Blue",
+          "resources": 1,
+          "connections": [
+            "Fallston",
+            "Joppatowne",
+            "Edgewood",
+            "Aberdeen Proving Ground"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": 1
+        },
+        "Aberdeen Proving Ground": {
+          "control": "Red",
+          "resources": 1,
+          "connections": [
+            "Edgewood",
+            "Havre de Grace",
+            "Bel Air"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": 0
+        },
+        "Havre de Grace": {
+          "control": "Red",
+          "resources": 1,
+          "connections": [
+            "Aberdeen Proving Ground"
+          ],
+          "own_units_count": 1,
+          "enemy_units_count": 0
+        },
+        "Edgewood": {
+          "control": "Red",
+          "resources": 1,
+          "connections": [
+            "Aberdeen Proving Ground",
+            "Joppatowne",
+            "Bel Air"
+          ],
+          "own_units_count": 1,
+          "enemy_units_count": 0
+        },
+        "Joppatowne": {
+          "control": "Red",
+          "resources": 1,
+          "connections": [
+            "Edgewood",
+            "Bel Air"
+          ],
+          "own_units_count": 1,
+          "enemy_units_count": 0
+        },
+        "Fallston": {
+          "control": "Blue",
+          "resources": 1,
+          "connections": [
+            "Bel Air"
+          ],
+          "own_units_count": 0,
+          "enemy_units_count": null
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "move",
+        "unit_id": "Red-5",
+        "to": "Bel Air"
+      },
+      {
+        "type": "move",
+        "unit_id": "Red-4",
+        "to": "Bel Air"
+      }
+    ],
+    "raw_response": "You are the RED Team Commander. Your objective is to win by controlling at least 4 out of 6 locations or by eliminating all enemy units. The game ends after a maximum of 20 turns if no winner is declared.\n\n**Current Game State:**\n\n*   **Resources:** 10\n*   **Controlled Locations:** Aberdeen Proving Ground, Havre de Grace, Edgewood, Joppatowne (4 total)\n*   **Own Units:** 3 Infantry (Red-5 at Joppatowne (Health: 2, Strength: 1), two unknown IDs at Havre de Grace (Health: 3, Strength: 1 and Health: 2, Strength: 1) - it seems there was an error in reporting unit IDs, assuming these are distinct units for planning.)\n*   **Opponent Units:** 2 in Bel Air\n*   **Action Limit:** 2 actions (equal to opponent's unit count)\n\n**Location Status:**\n\n*   **Bel Air:** Controlled by Blue, 1 enemy unit, 1 resource. Connections: Fallston, Joppatowne, Edgewood, Aberdeen Proving Ground.\n*   **Aberdeen Proving Ground:** Controlled by Red, 0 enemy units, 1 resource. Connections: Edgewood, Havre de Grace, Bel Air.\n*   **Havre de Grace:** Controlled by Red, 0 enemy units, 1 resource. Connections: Aberdeen Proving Ground.\n*   **Edgewood:** Controlled by Red, 0 enemy units, 1 resource. Connections: Aberdeen Proving Ground, Joppatowne, Bel Air.\n*   **Joppatowne:** Controlled by Red, 0 enemy units, 1 resource. Connections: Edgewood, Bel Air.\n*   **Fallston:** Controlled by Blue, null enemy units, 1 resource. Connections: Bel Air.\n\n**Analysis:**\n\nYou currently control 4 out of 6 locations, which means you are already winning the game. However, the game doesn't end until the win condition is explicitly met (control 4+ locations or eliminate all enemy units). The Blue team controls Bel Air and Fallston. There are 2 Blue units in Bel Air.\n\n**Strategy:**\n\nSince you already control 4 locations, the primary goal is to maintain control and eliminate the remaining enemy units in Bel Air. The opponent has 2 units, limiting you to 2 actions.\n\n1.  **Eliminate Enemy in Bel Air:** The most direct way to win is to eliminate the enemy units. You have units in Joppatowne and Edgewood that can attack Bel Air.\n2.  **Reinforce:** You have enough resources to reinforce if needed, but given you already control the majority of locations, consolidating and attacking is more efficient.\n\n**Proposed Actions:**\n\nGiven the action limit of 2:\n\n*   **Action 1:** Move a unit from Joppatowne to attack Bel Air. This will engage one of the enemy units.\n*   **Action 2:** Move a unit from Edgewood to attack Bel Air. This will engage the second enemy unit.\n\nThis approach directly targets the enemy's last stronghold and attempts to neutralize their forces entirely, thus securing a win.\n\n```json\n{\n  \"actions\": [\n    {\n      \"type\": \"move\",\n      \"unit_id\": \"Red-5\",\n      \"to\": \"Bel Air\"\n    },\n    {\n      \"type\": \"move\",\n      \"unit_id\": \"Red-4\",\n      \"to\": \"Bel Air\"\n    }\n  ]\n}\n```"
+  }
+]
