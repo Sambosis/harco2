@@ -1906,3 +1906,160 @@ ic| llm_controller.py:127 in get_action_plan()
     f"Response: {completion.choices[0].message.content}": 'Response: {"actions":[{"type":"move","unit_id":"Blue-4","to":"Edgewood"}]}'
 ic| llm_controller.py:135 in get_action_plan()
     f"Action plan: {action_plan}": 'Action plan: {'actions': [{'type': 'move', 'unit_id': 'Blue-4', 'to': 'Edgewood'}]}'
+ic| llm_controller.py:121 in get_action_plan()
+    await client.chat.completions.create(
+        model=model_for_team,
+        messages=[{'role': 'system', 'content': prompt}],
+        # temperature=0,  # Deterministic
+        # max_tokens=1000
+    ): ChatCompletion(id='chatcmpl-BtP74ISxtrGq23iElFrDJ38nS2xlB', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"actions":[{"type":"move","unit_id":"Blue-1","to":"Edgewood"},{"type":"move","unit_id":"Blue-2","to":"Edgewood"},{"type":"move","unit_id":"Blue-3","to":"Joppatowne"},{"type":"move","unit_id":"Blue-4","to":"Fallston"}]}', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1752544274, model='o4-mini-2025-04-16', object='chat.completion', service_tier='default', system_fingerprint=None, usage=CompletionUsage(completion_tokens=1434, prompt_tokens=1188, total_tokens=2622, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=1344, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=1152)))
+ic| llm_controller.py:127 in get_action_plan()
+    f"Response: {completion.choices[0].message.content}": 'Response: {"actions":[{"type":"move","unit_id":"Blue-1","to":"Edgewood"},{"type":"move","unit_id":"Blue-2","to":"Edgewood"},{"type":"move","unit_id":"Blue-3","to":"Joppatowne"},{"type":"move","unit_id":"Blue-4","to":"Fallston"}]}'
+ic| llm_controller.py:135 in get_action_plan()
+    f"Action plan: {action_plan}": 'Action plan: {'actions': [{'type': 'move', 'unit_id': 'Blue-1', 'to': 'Edgewood'}, {'type': 'move', 'unit_id': 'Blue-2', 'to': 'Edgewood'}, {'type': 'move', 'unit_id': 'Blue-3', 'to': 'Joppatowne'}, {'type': 'move', 'unit_id': 'Blue-4', 'to': 'Fallston'}]}'
+ic| llm_controller.py:121 in get_action_plan()
+    await client.chat.completions.create(
+        model=model_for_team,
+        messages=[{'role': 'system', 'content': prompt}],
+        # temperature=0,  # Deterministic
+        # max_tokens=1000
+    ): ChatCompletion(id='chatcmpl-BtP7JMsYxtXCIq8CEWQt587R1a8sP', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{
+         "actions": [
+           {"type": "move", "unit_id": "Red-1", "to": "Edgewood"},
+           {"type": "move", "unit_id": "Red-2", "to": "Edgewood"},
+           {"type": "move", "unit_id": "Red-3", "to": "Havre de Grace"},
+           {"type": "move", "unit_id": "Red-4", "to": "Bel Air"},
+           {"type": "move", "unit_id": "Red-5", "to": "Edgewood"}
+         ]
+       }', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1752544289, model='gpt-4.1-2025-04-14', object='chat.completion', service_tier='default', system_fingerprint=None, usage=CompletionUsage(completion_tokens=127, prompt_tokens=1209, total_tokens=1336, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+ic| llm_controller.py:127 in get_action_plan()
+    f"Response: {completion.choices[0].message.content}": '''Response: {
+                                                             "actions": [
+                                                               {"type": "move", "unit_id": "Red-1", "to": "Edgewood"},
+                                                               {"type": "move", "unit_id": "Red-2", "to": "Edgewood"},
+                                                               {"type": "move", "unit_id": "Red-3", "to": "Havre de Grace"},
+                                                               {"type": "move", "unit_id": "Red-4", "to": "Bel Air"},
+                                                               {"type": "move", "unit_id": "Red-5", "to": "Edgewood"}
+                                                             ]
+                                                           }'''
+ic| llm_controller.py:135 in get_action_plan()
+    f"Action plan: {action_plan}": 'Action plan: {'actions': [{'type': 'move', 'unit_id': 'Red-1', 'to': 'Edgewood'}, {'type': 'move', 'unit_id': 'Red-2', 'to': 'Edgewood'}, {'type': 'move', 'unit_id': 'Red-3', 'to': 'Havre de Grace'}, {'type': 'move', 'unit_id': 'Red-4', 'to': 'Bel Air'}, {'type': 'move', 'unit_id': 'Red-5', 'to': 'Edgewood'}]}'
+ic| llm_controller.py:121 in get_action_plan()
+    await client.chat.completions.create(
+        model=model_for_team,
+        messages=[{'role': 'system', 'content': prompt}],
+        # temperature=0,  # Deterministic
+        # max_tokens=1000
+    ): ChatCompletion(id='chatcmpl-BtP7KhvV6l64TbsV6mcjW6VcfkdVA', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"actions":[{"type":"move","unit_id":"Blue-1","to":"Aberdeen Proving Ground"}]}', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1752544290, model='o4-mini-2025-04-16', object='chat.completion', service_tier='default', system_fingerprint=None, usage=CompletionUsage(completion_tokens=1002, prompt_tokens=1213, total_tokens=2215, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=960, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+ic| llm_controller.py:127 in get_action_plan()
+    f"Response: {completion.choices[0].message.content}": 'Response: {"actions":[{"type":"move","unit_id":"Blue-1","to":"Aberdeen Proving Ground"}]}'
+ic| llm_controller.py:135 in get_action_plan()
+    f"Action plan: {action_plan}": 'Action plan: {'actions': [{'type': 'move', 'unit_id': 'Blue-1', 'to': 'Aberdeen Proving Ground'}]}'
+ic| llm_controller.py:121 in get_action_plan()
+    await client.chat.completions.create(
+        model=model_for_team,
+        messages=[{'role': 'system', 'content': prompt}],
+        # temperature=0,  # Deterministic
+        # max_tokens=1000
+    ): ChatCompletion(id='chatcmpl-BtPCn1QAp7cyWWFLnNutXatjJkOhY', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"actions":[{"type":"move","unit_id":"Blue-1","to":"Fallston"},{"type":"move","unit_id":"Blue-2","to":"Joppatowne"},{"type":"move","unit_id":"Blue-3","to":"Edgewood"}]}', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1752544629, model='o4-mini-2025-04-16', object='chat.completion', service_tier='default', system_fingerprint=None, usage=CompletionUsage(completion_tokens=970, prompt_tokens=1188, total_tokens=2158, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=896, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=1152)))
+ic| llm_controller.py:127 in get_action_plan()
+    f"Response: {completion.choices[0].message.content}": 'Response: {"actions":[{"type":"move","unit_id":"Blue-1","to":"Fallston"},{"type":"move","unit_id":"Blue-2","to":"Joppatowne"},{"type":"move","unit_id":"Blue-3","to":"Edgewood"}]}'
+ic| llm_controller.py:135 in get_action_plan()
+    f"Action plan: {action_plan}": 'Action plan: {'actions': [{'type': 'move', 'unit_id': 'Blue-1', 'to': 'Fallston'}, {'type': 'move', 'unit_id': 'Blue-2', 'to': 'Joppatowne'}, {'type': 'move', 'unit_id': 'Blue-3', 'to': 'Edgewood'}]}'
+ic| llm_controller.py:121 in get_action_plan()
+    await client.chat.completions.create(
+        model=model_for_team,
+        messages=[{'role': 'system', 'content': prompt}],
+        # temperature=0,  # Deterministic
+        # max_tokens=1000
+    ): ChatCompletion(id='chatcmpl-BtPCwpCxYVWzhf2Cu3W8ZQIi0ZDE1', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{
+         "actions": [
+           {"type": "move", "unit_id": "Red-1", "to": "Havre de Grace"},
+           {"type": "move", "unit_id": "Red-2", "to": "Edgewood"},
+           {"type": "move", "unit_id": "Red-3", "to": "Edgewood"},
+           {"type": "move", "unit_id": "Red-4", "to": "Bel Air"},
+           {"type": "move", "unit_id": "Red-5", "to": "Edgewood"}
+         ]
+       }', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1752544638, model='gpt-4.1-2025-04-14', object='chat.completion', service_tier='default', system_fingerprint=None, usage=CompletionUsage(completion_tokens=127, prompt_tokens=1209, total_tokens=1336, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+ic| llm_controller.py:127 in get_action_plan()
+    f"Response: {completion.choices[0].message.content}": '''Response: {
+                                                             "actions": [
+                                                               {"type": "move", "unit_id": "Red-1", "to": "Havre de Grace"},
+                                                               {"type": "move", "unit_id": "Red-2", "to": "Edgewood"},
+                                                               {"type": "move", "unit_id": "Red-3", "to": "Edgewood"},
+                                                               {"type": "move", "unit_id": "Red-4", "to": "Bel Air"},
+                                                               {"type": "move", "unit_id": "Red-5", "to": "Edgewood"}
+                                                             ]
+                                                           }'''
+ic| llm_controller.py:135 in get_action_plan()
+    f"Action plan: {action_plan}": 'Action plan: {'actions': [{'type': 'move', 'unit_id': 'Red-1', 'to': 'Havre de Grace'}, {'type': 'move', 'unit_id': 'Red-2', 'to': 'Edgewood'}, {'type': 'move', 'unit_id': 'Red-3', 'to': 'Edgewood'}, {'type': 'move', 'unit_id': 'Red-4', 'to': 'Bel Air'}, {'type': 'move', 'unit_id': 'Red-5', 'to': 'Edgewood'}]}'
+ic| llm_controller.py:121 in get_action_plan()
+    await client.chat.completions.create(
+        model=model_for_team,
+        messages=[{'role': 'system', 'content': prompt}],
+        # temperature=0,  # Deterministic
+        # max_tokens=1000
+    ): ChatCompletion(id='chatcmpl-BtPCxbCQCqlytck7ozjuEwGmfwpSA', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"actions":[{"type":"move","unit_id":"Blue-4","to":"Aberdeen Proving Ground"}]}', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1752544639, model='o4-mini-2025-04-16', object='chat.completion', service_tier='default', system_fingerprint=None, usage=CompletionUsage(completion_tokens=1322, prompt_tokens=1165, total_tokens=2487, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=1280, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+ic| llm_controller.py:127 in get_action_plan()
+    f"Response: {completion.choices[0].message.content}": 'Response: {"actions":[{"type":"move","unit_id":"Blue-4","to":"Aberdeen Proving Ground"}]}'
+ic| llm_controller.py:135 in get_action_plan()
+    f"Action plan: {action_plan}": 'Action plan: {'actions': [{'type': 'move', 'unit_id': 'Blue-4', 'to': 'Aberdeen Proving Ground'}]}'
+ic| llm_controller.py:121 in get_action_plan()
+    await client.chat.completions.create(
+        model=model_for_team,
+        messages=[{'role': 'system', 'content': prompt}],
+        # temperature=0,  # Deterministic
+        # max_tokens=1000
+    ): ChatCompletion(id='chatcmpl-BtPDA7JKPn52fUn4lmMVezT2x71GQ', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{
+         "actions": [
+           {"type": "move", "unit_id": "Red-2", "to": "Joppatowne"},
+           {"type": "move", "unit_id": "Red-3", "to": "Bel Air"},
+           {"type": "reinforce", "location": "Edgewood"},
+           {"type": "move", "unit_id": "Red-1", "to": "Aberdeen Proving Ground"}
+         ]
+       }', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1752544652, model='gpt-4.1-2025-04-14', object='chat.completion', service_tier='default', system_fingerprint=None, usage=CompletionUsage(completion_tokens=99, prompt_tokens=1161, total_tokens=1260, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+ic| llm_controller.py:127 in get_action_plan()
+    f"Response: {completion.choices[0].message.content}": '''Response: {
+                                                             "actions": [
+                                                               {"type": "move", "unit_id": "Red-2", "to": "Joppatowne"},
+                                                               {"type": "move", "unit_id": "Red-3", "to": "Bel Air"},
+                                                               {"type": "reinforce", "location": "Edgewood"},
+                                                               {"type": "move", "unit_id": "Red-1", "to": "Aberdeen Proving Ground"}
+                                                             ]
+                                                           }'''
+ic| llm_controller.py:135 in get_action_plan()
+    f"Action plan: {action_plan}": 'Action plan: {'actions': [{'type': 'move', 'unit_id': 'Red-2', 'to': 'Joppatowne'}, {'type': 'move', 'unit_id': 'Red-3', 'to': 'Bel Air'}, {'type': 'reinforce', 'location': 'Edgewood'}, {'type': 'move', 'unit_id': 'Red-1', 'to': 'Aberdeen Proving Ground'}]}'
+ic| llm_controller.py:121 in get_action_plan()
+    await client.chat.completions.create(
+        model=model_for_team,
+        messages=[{'role': 'system', 'content': prompt}],
+        # temperature=0,  # Deterministic
+        # max_tokens=1000
+    ): ChatCompletion(id='chatcmpl-BtPDB7myEEKtLyyfVDjXrTjmNITVV', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"actions":[{"type":"move","unit_id":"Blue-4","to":"Havre de Grace"}]}', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1752544653, model='o4-mini-2025-04-16', object='chat.completion', service_tier='default', system_fingerprint=None, usage=CompletionUsage(completion_tokens=1258, prompt_tokens=1129, total_tokens=2387, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=1216, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+ic| llm_controller.py:127 in get_action_plan()
+    f"Response: {completion.choices[0].message.content}": 'Response: {"actions":[{"type":"move","unit_id":"Blue-4","to":"Havre de Grace"}]}'
+ic| llm_controller.py:135 in get_action_plan()
+    f"Action plan: {action_plan}": 'Action plan: {'actions': [{'type': 'move', 'unit_id': 'Blue-4', 'to': 'Havre de Grace'}]}'
+ic| llm_controller.py:121 in get_action_plan()
+    await client.chat.completions.create(
+        model=model_for_team,
+        messages=[{'role': 'system', 'content': prompt}],
+        # temperature=0,  # Deterministic
+        # max_tokens=1000
+    ): ChatCompletion(id='chatcmpl-BtPDNpFjiS8xxW5UZl0y7xgbt9Nm3', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{
+         "actions": [
+           {"type": "reinforce", "location": "Bel Air"},
+           {"type": "move", "unit_id": "Red-3", "to": "Fallston"},
+           {"type": "move", "unit_id": "Red-5", "to": "Joppatowne"}
+         ]
+       }', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1752544665, model='gpt-4.1-2025-04-14', object='chat.completion', service_tier='default', system_fingerprint=None, usage=CompletionUsage(completion_tokens=73, prompt_tokens=1112, total_tokens=1185, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+ic| llm_controller.py:127 in get_action_plan()
+    f"Response: {completion.choices[0].message.content}": '''Response: {
+                                                             "actions": [
+                                                               {"type": "reinforce", "location": "Bel Air"},
+                                                               {"type": "move", "unit_id": "Red-3", "to": "Fallston"},
+                                                               {"type": "move", "unit_id": "Red-5", "to": "Joppatowne"}
+                                                             ]
+                                                           }'''
+ic| llm_controller.py:135 in get_action_plan()
+    f"Action plan: {action_plan}": 'Action plan: {'actions': [{'type': 'reinforce', 'location': 'Bel Air'}, {'type': 'move', 'unit_id': 'Red-3', 'to': 'Fallston'}, {'type': 'move', 'unit_id': 'Red-5', 'to': 'Joppatowne'}]}'
