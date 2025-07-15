@@ -23,12 +23,12 @@ LOCATIONS = [
 ]
 
 ADJACENCIES = {
-    "Bel Air": ["Fallston", "Joppatowne", "Edgewood"],
-    "Aberdeen Proving Ground": ["Edgewood", "Havre de Grace"],
+    "Bel Air": ["Fallston", "Joppatowne", "Edgewood", "Aberdeen Proving Ground"],
+    "Aberdeen Proving Ground": ["Edgewood", "Havre de Grace", "Bel Air"],
     "Havre de Grace": ["Aberdeen Proving Ground"],
     "Edgewood": ["Bel Air", "Joppatowne", "Aberdeen Proving Ground"],
-    "Joppatowne": ["Bel Air", "Edgewood", "Fallston"],
-    "Fallston": ["Bel Air", "Joppatowne"]
+    "Joppatowne": ["Bel Air", "Edgewood"],
+    "Fallston": ["Bel Air"]
 }
 
 TEAM_MODELS = {
@@ -79,7 +79,7 @@ async def get_action_plan(team, visible_state):
     prompt = f"""
 You are the commander of the {team.upper()} Team in a turn-based strategy game set in Harford County, Maryland.
 
-Game Goal: Win by controlling at least 4 out of 6 locations or by eliminating all enemy units. The game ends after a maximum of 20 turns if no winner.
+Game Goal: Win by controlling at least 5 out of 6 locations or by eliminating all enemy units. The game ends after a maximum of 120 turns if no winner.
 
 Map:
 {map_desc}
