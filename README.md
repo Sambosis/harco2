@@ -4,15 +4,15 @@ A turn-based strategy game set in Harford County, Maryland, where two AI-control
 
 ## Game Overview
 
-This is a tactical strategy game where two teams (Blue and Red) battle for control of six locations in Harford County. Each team is controlled by an AI powered by OpenAI's GPT-4, making strategic decisions based on the current game state.
+This is a tactical strategy game where two teams (Blue and Red) battle for control of six locations in Harford County. Each team is controlled by an AI powered by OpenAI's language models, making strategic decisions based on the current game state.
 
 ## Objective
 
 **Win by either:**
-- Controlling at least 4 out of 6 locations
+- Controlling at least 5 out of 6 locations
 - Eliminating all enemy units
 
-**Game Length:** Maximum of 20 turns (if no winner is determined)
+**Game Length:** Maximum of 120 turns (if no winner is determined)
 
 ## Map Layout
 
@@ -33,8 +33,8 @@ Each location connects to specific adjacent locations:
 - **Aberdeen Proving Ground** ↔ Edgewood, Havre de Grace, Bel Air
 - **Havre de Grace** ↔ Aberdeen Proving Ground
 - **Edgewood** ↔ Aberdeen Proving Ground, Joppatowne, Bel Air
-- **Joppatowne** ↔ Edgewood, Bel Air, Fallston
-- **Fallston** ↔ Bel Air, Joppatowne
+- **Joppatowne** ↔ Edgewood, Bel Air
+- **Fallston** ↔ Bel Air
 
 ## Unit System
 
@@ -83,6 +83,10 @@ When units move to a location with enemy units, combat is initiated:
 1. **Blue team** moves on odd turns (1, 3, 5, ...)
 2. **Red team** moves on even turns (2, 4, 6, ...)
 
+### Action Limits
+- **Dynamic Action Limit:** Each team can perform a maximum number of actions per turn equal to the number of opponent units (minimum 1)
+- This creates a strategic balance where eliminating enemy units reduces their action capacity
+
 ### Turn Actions
 Each turn, teams can perform multiple actions:
 
@@ -117,12 +121,24 @@ Teams have **limited visibility**:
 ## Victory Conditions
 
 ### Immediate Victory
-- **Territorial Control:** Control 4+ out of 6 locations
+- **Territorial Control:** Control 5+ out of 6 locations
 - **Total Elimination:** Eliminate all enemy units
 
 ### Draw Conditions
-- **Turn Limit:** Game ends in draw after 20 turns with no winner
+- **Turn Limit:** Game ends in draw after 120 turns with no winner
 - **Stalemate:** No meaningful progress possible
+
+## Game Execution
+
+### Batch Mode
+The game runs in continuous batches of 10 games each:
+- After each batch, results are displayed
+- Players can choose to run another batch or exit
+- Statistics are tracked across all games
+
+### AI Models
+- **Blue Team:** GPT-4.1
+- **Red Team:** o4-mini (OpenAI's optimized model)
 
 ## How to Run the Game
 
@@ -143,24 +159,28 @@ uv run main.py
 ### Game Interface
 - **Visual Display:** Pygame window showing the map, units, and current state
 - **Console Output:** Detailed turn-by-turn actions and results
-- **Real-time Updates:** Game state updates after each action
+- **Real-time Updates:** Game state updates after each action with animations
+- **Batch Results:** Summary statistics after each 10-game batch
 
 ### Controls
 - **Close Window:** Click the X button or press Ctrl+C in terminal
-- **Game Speed:** Automatically progresses with 1-second delays between turns
+- **After Batch:** Press SPACE/ENTER to continue with next batch, ESC to exit
+- **Game Speed:** Includes 2-second animation delays between turns
 
 ## Technical Details
 
 ### AI Decision Making
-- Each team uses **GPT-4** to make strategic decisions
+- Each team uses different OpenAI models to make strategic decisions
 - AI receives current game state and generates action plans
 - Actions are validated and executed by the game engine
+- Action limits prevent overwhelming strategies
 
 ### File Structure
-- `main.py` - Game loop and main execution
+- `main.py` - Game loop, batch management, and visualization control
 - `game.py` - Core game logic and state management
 - `llm_controller.py` - AI decision making and OpenAI integration
-- `visualization.py` - Pygame-based visual interface
+- `visualization.py` - Pygame-based visual interface with animations
+- `batch_runner.py` - Batch game execution and statistics
 - `pyproject.toml` - Dependencies and project configuration
 
 ### Dependencies
@@ -168,6 +188,7 @@ uv run main.py
 - `pygame` - Game visualization
 - `python-dotenv` - Environment configuration
 - `icecream` - Debug logging
+- `rich` - Console formatting and tables
 
 ## Game Features
 
@@ -176,12 +197,20 @@ uv run main.py
 - **Resource Management:** Invest in reinforcements vs. save for future
 - **Unit Positioning:** Multi-turn movement planning
 - **Combat Tactics:** Concentrate forces vs. spread control
+- **Action Economy:** Limited actions based on opponent strength
 
 ### AI Capabilities
 - **Adaptive Strategy:** AI learns from game state
 - **Multi-turn Planning:** Can execute complex movement chains
 - **Resource Optimization:** Balances expansion and reinforcement
 - **Tactical Combat:** Considers unit strengths in battle planning
+- **Dynamic Constraints:** Adapts to changing action limits
+
+### Performance Tracking
+- **Batch Statistics:** Win rates, average game length
+- **Model Comparison:** Performance metrics for different AI models
+- **Game Logging:** Detailed move-by-move analysis
+- **Real-time Visualization:** Animated combat and movement
 
 ## Future Enhancements
 
@@ -191,3 +220,5 @@ Potential improvements could include:
 - Special abilities or cards
 - Extended campaign mode
 - Human vs. AI gameplay option
+- Adjustable difficulty levels
+- Tournament mode with elimination brackets
