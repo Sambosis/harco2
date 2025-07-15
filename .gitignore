@@ -10,7 +10,8 @@
 .env.development
 .env.test
 .env.production
-
+games/
+*.log
 # more python specific ignores
 __pycache__/
 *.pyc
